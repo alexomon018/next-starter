@@ -19,7 +19,7 @@ export const Primary: StoryObj<typeof Button> = {
 	args: {
 		variant: "default",
 		children: buttonText,
-		className: "text-white bg-black"
+		className: "text-green bg-black"
 	}
 };
 

@@ -1,4 +1,45 @@
-import { Button } from "@/components/atoms/Button";
+import { Button } from "@atoms";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+
+interface PageParams {
+	locale: string;
+}
+
+export const generateMetadata = async ({
+	params
+}: {
+	params: PageParams;
+}): Promise<Metadata> => {
+	const { locale } = params;
+
+	const page = {
+		seoMetadata: {
+			seoTitle: "Alexomons018",
+			seoDescription: "Welcome to alexomons018 template.",
+			seoKeywords: ["Alexomons018", "Template"],
+			noIndex: false,
+			noFollow: false
+		}
+	};
+
+	// check if page exists and if it belongs to the correct city
+	if (!page) {
+		notFound();
+	}
+
+	const seo = page.seoMetadata;
+
+	return {
+		title: seo?.seoTitle,
+		description: seo?.seoDescription,
+		keywords: seo?.seoKeywords as string[],
+		robots: {
+			index: !seo?.noIndex,
+			follow: !seo?.noFollow
+		}
+	};
+};
 
 const Home = () => (
 	<main>

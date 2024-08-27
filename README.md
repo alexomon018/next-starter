@@ -1,6 +1,6 @@
 # Next.js Starter
 
-This Next.js Starter project is designed to provide a solid foundation for building modern web applications with a focus on best practices, scalability, and maintainability. It includes a pre-configured setup with Storybook, ShadCN (for design using Tailwind CSS), Atomic Design principles, ESLint, Jest for testing, and Prettier for code formatting.
+This Next.js Starter project is designed to provide a solid foundation for building modern web applications with a focus on best practices, scalability, and maintainability. It includes a pre-configured setup with Storybook, ShadCN (for design using Tailwind CSS), Atomic Design principles, ESLint, Jest for testing, and Prettier for code formatting and Chromatic for visual testing.
 
 ## Table of Contents
 
