@@ -3,9 +3,9 @@ import { makeDecorator } from '@storybook/addons';
 import type { ReactElement } from 'react';
 import React from 'react';
 
-const withHeaderThemeProvider = makeDecorator({
+const withThemeProvider = makeDecorator({
   name: 'withHeaderThemeProvider',
-  parameterName: 'headerTheme',
+  parameterName: 'Th',
   wrapper: (storyFunction, context) => (
     <ThemeProvider
       attribute="class"
@@ -18,4 +18,4 @@ const withHeaderThemeProvider = makeDecorator({
   ),
 });
 
-export default withHeaderThemeProvider;
+export default withThemeProvider;

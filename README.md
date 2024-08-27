@@ -1,36 +1,165 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Starter
+
+This Next.js Starter project is designed to provide a solid foundation for building modern web applications with a focus on best practices, scalability, and maintainability. It includes a pre-configured setup with Storybook, ShadCN (for design using Tailwind CSS), Atomic Design principles, ESLint, Jest for testing, and Prettier for code formatting.
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [Scripts](#scripts)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Getting Started
 
-First, run the development server:
+To get started with this project, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/alexomon018/nextjs-starter.git
+   cd nextjs-starter
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   pnpm install
+   # or
+   yarn install
+   ```
+
+3. **Run the development server:**
+
+   ```bash
+   pnpm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Open your browser:**
+
+   Navigate to [http://localhost:3000](http://localhost:3000) to see your app in action.
+
+## Features
+
+- **Next.js**: A powerful React framework for server-side rendering, static site generation, and more.
+- **Storybook**: A tool for building and testing UI components in isolation.
+- **ShadCN (Tailwind CSS)**: A component library built with Tailwind CSS, enabling rapid UI development.
+- **Atomic Design**: A design methodology that divides UI components into atoms, molecules, organisms, templates, and pages.
+- **ESLint**: A tool for identifying and fixing problems in your JavaScript/TypeScript code.
+- **Jest**: A delightful JavaScript testing framework with a focus on simplicity.
+- **Prettier**: An opinionated code formatter that ensures consistent style across your codebase.
+
+## Project Structure
+
+This project follows a modular and scalable folder structure based on Atomic Design principles:
+
+```
+├── src
+│   ├── components  // Atomic components (atoms, molecules, organisms)
+│   │   ├── atoms
+│   │   ├── molecules
+│   │   └── organisms
+│   ├── pages       // Next.js pages
+│   ├── styles      // Global styles and Tailwind CSS configuration
+│   ├── hooks       // Custom React hooks
+│   ├── utils       // Utility functions and helpers
+│   ├── tests       // Unit and integration tests
+├── .storybook      // Storybook configuration files
+├── .eslintrc       // ESLint configuration
+├── jest.config.js  // Jest configuration
+├── tailwind.config.js // Tailwind CSS configuration
+├── prettier.config.js // Prettier configuration
+└── package.json    // Project dependencies and scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Storybook
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To start Storybook and develop components in isolation:
 
-## Learn More
+```bash
+pnpm run storybook
+# or
+yarn storybook
+```
 
-To learn more about Next.js, take a look at the following resources:
+Storybook will run on [http://localhost:6006](http://localhost:6006).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Linting
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To lint your code using ESLint:
 
-## Deploy on Vercel
+```bash
+npm run lint
+# or
+yarn lint
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Testing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+To run tests using Jest:
+
+```bash
+pnpm run test
+# or
+yarn test
+```
+
+### Formatting
+
+To format your code using Prettier:
+
+```bash
+pnpm run format
+# or
+yarn format
+```
+
+## Scripts
+
+Here are the main scripts available in this project:
+
+- `dev`: Starts the Next.js development server.
+- `build`: Builds the Next.js application for production.
+- `start`: Starts the production server.
+- `lint`: Lints the codebase using ESLint.
+- `test`: Runs tests using Jest.
+- `format`: Formats the codebase using Prettier.
+- `storybook`: Starts the Storybook server.
+- `build-storybook`: Builds the Storybook for production.
+
+## Configuration
+
+### ESLint
+
+The ESLint configuration is located in `.eslintrc`. It is pre-configured with recommended rules and plugins for Next.js, React, and Tailwind CSS.
+
+### Prettier
+
+The Prettier configuration is located in `prettier.config.js`. It enforces consistent formatting rules across your codebase.
+
+### Jest
+
+The Jest configuration is located in `jest.config.js`. It includes setup for testing React components and utility functions.
+
+### Tailwind CSS
+
+The Tailwind CSS configuration is located in `tailwind.config.js`. Customize it as needed to fit your design requirements.
+
+## Contributing
+
+Contributions are welcome! If you find any bugs or want to add new features, please feel free to open an issue or submit a pull request.
+
+---
+
+Happy coding! 🚀
+
+---
+
+Feel free to customize this README to better fit your project's needs.

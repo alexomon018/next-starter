@@ -1,6 +1,6 @@
 import type { Preview } from '@storybook/react';
 import '../app/globals.css';
-import { withHeaderThemeProvider } from '../providers';
+import { withThemeProvider } from '../providers';
 import React from 'react';
 
 const preview: Preview = {
@@ -16,7 +16,7 @@ const preview: Preview = {
     },
   },
   decorators: [
-    withHeaderThemeProvider,
+    withThemeProvider,
     (Story) => {
       return <Story />;
     },

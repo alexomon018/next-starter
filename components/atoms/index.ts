@@ -1,3 +1,6 @@
-import { Button } from './Button';
+import Button from "./Button";
+import Label from "./Label";
+import Checkbox from "./Checkbox";
+import Input from "./Input";
 
-export { Button };
+export { Button, Label, Checkbox, Input };
