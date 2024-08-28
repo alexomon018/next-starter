@@ -2,10 +2,6 @@ name: Lintcheck
 
 on:
   workflow_call:
-    inputs:
-      node-version:
-        required: true
-        type: string
 
 jobs:
   lintcheck:
