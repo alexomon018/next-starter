@@ -23,7 +23,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
 
-      - run: npm ci
+      - run: npm ci --legacy-peer-deps
         name: Install modules from npm
 
       - run: npm test
