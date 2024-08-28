@@ -1,0 +1,36 @@
+name: Build and Test and Lintcheck
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    uses: ./.github/workflows/unit-test.yml
+
+  lintcheck:
+    uses: ./.github/workflows/lintcheck.yml
+
+  build:
+    runs-on: ubuntu-latest
+    needs: [test, lintcheck]
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+
+      - run: npm ci
+        name: Install modules from npm
+
+      - run: npm run build
+        name: Build the project

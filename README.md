@@ -77,6 +77,26 @@ This project follows a modular and scalable folder structure based on Atomic Des
 └── package.json    // Project dependencies and scripts
 ```
 
+## Branch Name Conventions
+
+### Bug Fixes
+
+If you are working on a bug ticket, name your branch:
+
+```
+bugfix/B{TICKET_ID}-{SHORT_TICKET_NAME}
+```
+
+### Feature Development
+
+If you are working on a feature ticket, name your branch:
+
+```
+features/U{TICKET_ID}-{SHORT_TICKET_NAME}
+```
+
+---
+
 ## Usage
 
 ### Storybook

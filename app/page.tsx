@@ -2,17 +2,7 @@ import { Button } from "@atoms";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-interface PageParams {
-	locale: string;
-}
-
-export const generateMetadata = async ({
-	params
-}: {
-	params: PageParams;
-}): Promise<Metadata> => {
-	const { locale } = params;
-
+export const generateMetadata = async (): Promise<Metadata> => {
 	const page = {
 		seoMetadata: {
 			seoTitle: "Alexomons018",
