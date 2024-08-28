@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { Input } from "./index";
+import Input from "./index";
 
 describe("Input component", () => {
 	it("renders without crashing", () => {
